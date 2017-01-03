@@ -11,8 +11,23 @@
 		C1DAC8621E16298A00DCBB12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DAC8611E16298A00DCBB12 /* ViewController.swift */; };
 		C1DAC8651E16298A00DCBB12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1DAC8631E16298A00DCBB12 /* Main.storyboard */; };
 		C1DAC8671E16298A00DCBB12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1DAC8661E16298A00DCBB12 /* Assets.xcassets */; };
-		C1DAC86A1E16298A00DCBB12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1DAC8681E16298A00DCBB12 /* LaunchScreen.storyboard */; };
+		C1F6882E1E1B5B9A004D03DF /* AceTM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F6882D1E1B5B9A004D03DF /* AceTM.framework */; };
+		C1F688301E1B5BA0004D03DF /* AceTM.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C1F6882D1E1B5B9A004D03DF /* AceTM.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C1C1F41E1E162FC4003632EB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C1F688301E1B5BA0004D03DF /* AceTM.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C1DAC85C1E16298A00DCBB12 /* AceTM-iOS-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AceTM-iOS-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -20,8 +35,8 @@
 		C1DAC8611E16298A00DCBB12 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C1DAC8641E16298A00DCBB12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C1DAC8661E16298A00DCBB12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C1DAC8691E16298A00DCBB12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C1DAC86B1E16298A00DCBB12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1F6882D1E1B5B9A004D03DF /* AceTM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AceTM.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1F6882E1E1B5B9A004D03DF /* AceTM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,11 +70,11 @@
 		C1DAC85E1E16298A00DCBB12 /* AceTM-iOS-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				C1F6882D1E1B5B9A004D03DF /* AceTM.framework */,
 				C1DAC85F1E16298A00DCBB12 /* AppDelegate.swift */,
 				C1DAC8611E16298A00DCBB12 /* ViewController.swift */,
 				C1DAC8631E16298A00DCBB12 /* Main.storyboard */,
 				C1DAC8661E16298A00DCBB12 /* Assets.xcassets */,
-				C1DAC8681E16298A00DCBB12 /* LaunchScreen.storyboard */,
 				C1DAC86B1E16298A00DCBB12 /* Info.plist */,
 			);
 			path = "AceTM-iOS-Demo";
@@ -74,6 +90,7 @@
 				C1DAC8581E16298A00DCBB12 /* Sources */,
 				C1DAC8591E16298A00DCBB12 /* Frameworks */,
 				C1DAC85A1E16298A00DCBB12 /* Resources */,
+				C1C1F41E1E162FC4003632EB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -124,7 +141,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1DAC86A1E16298A00DCBB12 /* LaunchScreen.storyboard in Resources */,
 				C1DAC8671E16298A00DCBB12 /* Assets.xcassets in Resources */,
 				C1DAC8651E16298A00DCBB12 /* Main.storyboard in Resources */,
 			);
@@ -151,14 +167,6 @@
 				C1DAC8641E16298A00DCBB12 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		C1DAC8681E16298A00DCBB12 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C1DAC8691E16298A00DCBB12 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -262,9 +270,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = C79Y6FEE5T;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AceTM-iOS-Demo",
+				);
 				INFOPLIST_FILE = "AceTM-iOS-Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.acecounter.AceTM-iOS-Demo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.acecounter.ios.acetmtest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -275,9 +287,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = C79Y6FEE5T;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AceTM-iOS-Demo",
+				);
 				INFOPLIST_FILE = "AceTM-iOS-Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.acecounter.AceTM-iOS-Demo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.acecounter.ios.acetmtest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -302,6 +318,7 @@
 				C1DAC8701E16298A00DCBB12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

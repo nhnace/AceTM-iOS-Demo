@@ -1,12 +1,14 @@
 //
 //  AppDelegate.swift
-//  AceTM-iOS-Demo
+//  SDKAppTest
 //
-//  Created by MoonJongRak on 2016. 12. 30..
+//  Created by MoonJongRak on 2016. 11. 1..
 //  Copyright © 2016년 MoonJongRak. All rights reserved.
 //
 
+import Foundation
 import UIKit
+import AceTM
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        AceTM.appDidFinishLaunching(responder: self)
+        return true
+    }
+
+    func application(_ application: UIApplication, handleOpen url: URL) -> Bool {
+        AceTM.appOpenUrl(responder: self, url: url)
         return true
     }
 
@@ -30,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
-        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+        // Called as part of the transition from the background to the active state here you can undo many of the changes made on entering the background.
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
