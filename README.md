@@ -26,7 +26,6 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 ``` objective-c
 //in objective-c
 #import <AceTM/AceTM-Swift.h>
-import AceTM
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [AceTM appDidFinishLaunchingWithResponder:self];
     return YES;
@@ -34,3 +33,5 @@ import AceTM
 ```
 * CPA 측정용 Deep-link 설정
 ![Screenshot](https://github.com/nhndnt/AceTM-iOS-Demo/blob/master/images/README7.png)
+- URL Schemes는 “ACE” + SID  구성 입력. (중요: 반드시 대문자로 입력할것)
+- identifier는 자신의 페키지 고유 id 입력
