@@ -14,7 +14,8 @@ AceTM SDK를 적용하기 위한 데모 어플리케이션입니다.
 ![Screenshot](https://github.com/nhndnt/AceTM-iOS-Demo/blob/master/images/README5.png)
 * AceCounter SID 설정 (info.plist)
 ![Screenshot](https://github.com/nhndnt/AceTM-iOS-Demo/blob/master/images/README6.png)
-* AppDelegate Class 설정
+* AceTM SDK 초기화 하기 AppDelegate Class 설정(반드시 didFinishLaunching 메소드에 명시하기)
+
 ``` swift
 //in swift
 import AceTM
