@@ -10,12 +10,12 @@
 
 @interface PrivateApi : NSObject
 
-+ (NSArray *) getInstalledApplication;
++ (NSArray *)getInstalledApplication;
 
-+ (NSArray *) getRunningProcesses;
++ (NSArray *)getRunningProcesses;
 
-+ (NSDictionary *) getIPAddresses;
++ (NSDictionary *)getIPAddresses;
 
-+ (NSString *) sha1:(NSString *)input;
++ (NSString *)sha1:(NSString *)input;
 @end
 

@@ -37,7 +37,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onClickPu(_ sender: UIButton) {
-        AceTM.login(responder: self, userId: "user_id1", userAge: 25, userGender: Parameter.GD_MAN, group1: "커스텀1", group2: "커스텀1", group3: "커스텀1", group4: "커스텀1", group5: "커스텀1")
+        AceTM.login(responder: self, userId: "user_id1", userAge: 25, userGender: AceTM.GD_MAN, group1: "커스텀1", group2: "커스텀1", group3: "커스텀1", group4: "커스텀1", group5: "커스텀1")
     }
 
     @IBAction func onClickErr(_ sender: UIButton) {
@@ -73,57 +73,57 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onClickNow(_ sender: UIButton) {
-        let product: Product = Product(name: "샤프란 130ml", code: "100000", price: 2000, quantity: 4)
+        let product: AceProduct = AceProduct(name: "샤프란 130ml", code: "100000", price: 2000, quantity: 4)
 
         AceTM.buyNow(product: product)
 
     }
 
     @IBAction func onClickWish(_ sender: UIButton) {
-        let product: Product = Product(name: "피죤 230ml", code: "100001", price: 3000, quantity: 2)
-        product.addOption(option: Option(code: "20000", name: "하얀색", quantity: 2))
-        product.addOption(option: Option(code: "20001", name: "검은색", quantity: 4))
+        let product: AceProduct = AceProduct(name: "피죤 230ml", code: "100001", price: 3000, quantity: 2)
+        product.addOption(option: AceOption(code: "20000", name: "하얀색", quantity: 2))
+        product.addOption(option: AceOption(code: "20001", name: "검은색", quantity: 4))
 
         AceTM.wishList(product: product)
     }
 
     @IBAction func onClickCart(_ sender: UIButton) {
-        let product1: Product = Product(name: "제품명", code: "제품코드", price: 3000, quantity: 2)
-        product1.addOption(option: Option(code: "옵션코드", name: "옵션명", quantity: 2))
-        product1.addOption(option: Option(code: "옵션코드", name: "옵션명", quantity: 4))
+        let product1: AceProduct = AceProduct(name: "제품명", code: "제품코드", price: 3000, quantity: 2)
+        product1.addOption(option: AceOption(code: "옵션코드", name: "옵션명", quantity: 2))
+        product1.addOption(option: AceOption(code: "옵션코드", name: "옵션명", quantity: 4))
 
         AceTM.addCart(product: product1)
     }
 
     @IBAction func onClickBuy(_ sender: UIButton) {
-        let product1: Product = Product(name: "피죤 230ml", code: "100001", price: 3000, quantity: 2)
-        product1.addOption(option: Option(code: "20000", name: "하얀색", quantity: 2))
-        product1.addOption(option: Option(code: "20001", name: "검은색", quantity: 4))
+        let product1: AceProduct = AceProduct(name: "피죤 230ml", code: "100001", price: 3000, quantity: 2)
+        product1.addOption(option: AceOption(code: "20000", name: "하얀색", quantity: 2))
+        product1.addOption(option: AceOption(code: "20001", name: "검은색", quantity: 4))
 
         AceTM.buyList(paymentMethod: "무통장",orderNumber: "1003020", totalPrice: 50000.0, product: product1)
     }
 
 
     @IBAction func onClickBuyDirect(_ sender: UIButton) {
-        let product1: Product = Product(name: "피죤 230ml", code: "100001", price: 3000, quantity: 2)
-        product1.addOption(option: Option(code: "20000", name: "하얀색", quantity: 2))
-        product1.addOption(option: Option(code: "20001", name: "검은색", quantity: 4))
+        let product1: AceProduct = AceProduct(name: "피죤 230ml", code: "100001", price: 3000, quantity: 2)
+        product1.addOption(option: AceOption(code: "20000", name: "하얀색", quantity: 2))
+        product1.addOption(option: AceOption(code: "20001", name: "검은색", quantity: 4))
 
         AceTM.buyList(paymentMethod: "무통장",orderNumber: "1003020", totalPrice: 50000.0, product: product1)
     }
 
     @IBAction func onClickBuyCredit(_ sender: UIButton) {
-        let product1: Product = Product(name: "피죤 230ml", code: "100001", price: 3000, quantity: 2)
-        product1.addOption(option: Option(code: "20000", name: "하얀색", quantity: 2))
-        product1.addOption(option: Option(code: "20001", name: "검은색", quantity: 4))
+        let product1: AceProduct = AceProduct(name: "피죤 230ml", code: "100001", price: 3000, quantity: 2)
+        product1.addOption(option: AceOption(code: "20000", name: "하얀색", quantity: 2))
+        product1.addOption(option: AceOption(code: "20001", name: "검은색", quantity: 4))
 
         AceTM.buyList(paymentMethod: "신용카드",orderNumber: "1003020", totalPrice: 50000.0, product: product1)
     }
 
     @IBAction func onClickBuyEtc(_ sender: UIButton) {
-        let product1: Product = Product(name: "피죤 230ml", code: "100001", price: 3000, quantity: 2)
-        product1.addOption(option: Option(code: "20000", name: "하얀색", quantity: 2))
-        product1.addOption(option: Option(code: "20001", name: "검은색", quantity: 4))
+        let product1: AceProduct = AceProduct(name: "피죤 230ml", code: "100001", price: 3000, quantity: 2)
+        product1.addOption(option: AceOption(code: "20000", name: "하얀색", quantity: 2))
+        product1.addOption(option: AceOption(code: "20001", name: "검은색", quantity: 4))
 
         AceTM.buyList(paymentMethod: "기타",orderNumber: "1003020", totalPrice: 50000.0, product: product1)
     }
@@ -133,14 +133,14 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onClickPay(_ sender: UIButton) {
-        let product1: Product = Product(name: "피죤 230ml", code: "100001", price: 3000, quantity: 2)
-        product1.addOption(option: Option(code: "20000", name: "하얀색", quantity: 2))
-        product1.addOption(option: Option(code: "20001", name: "검은색", quantity: 4))
+        let product1: AceProduct = AceProduct(name: "피죤 230ml", code: "100001", price: 3000, quantity: 2)
+        product1.addOption(option: AceOption(code: "20000", name: "하얀색", quantity: 2))
+        product1.addOption(option: AceOption(code: "20001", name: "검은색", quantity: 4))
         AceTM.pay(payName: "카카오톡 페이", product: product1)
     }
 
     @IBAction func onClickLogin(_ sender: UIButton) {
-        AceTM.login(responder: self, userId: "userId2", userAge: 25, userGender: Parameter.GD_MAN, group1: "커스텀1", group2: "커스텀1", group3: "커스텀1", group4: "커스텀1", group5: "커스텀1")
+        AceTM.login(responder: self, userId: "userId2", userAge: 25, userGender: AceTM.GD_MAN, group1: "커스텀1", group2: "커스텀1", group3: "커스텀1", group4: "커스텀1", group5: "커스텀1")
     }
 
     @IBAction func onClickJoin(_ sender: UIButton) {

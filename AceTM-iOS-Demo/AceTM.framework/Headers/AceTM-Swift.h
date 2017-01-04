@@ -121,13 +121,60 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
 #pragma clang diagnostic ignored "-Wduplicate-method-arg"
+
+SWIFT_CLASS("_TtC5AceTM9AceOption")
+@interface AceOption : NSObject
+- (nonnull instancetype)initWithCode:(NSString * _Nonnull)code name:(NSString * _Nonnull)name quantity:(NSInteger)quantity OBJC_DESIGNATED_INITIALIZER;
+- (void)setCodeWithCode:(NSString * _Nonnull)code;
+- (NSString * _Nonnull)getCode;
+- (void)setNameWithName:(NSString * _Nonnull)name;
+- (NSString * _Nonnull)getName;
+- (void)setQuantityWithQuantity:(NSInteger)quantity;
+- (NSInteger)getQuantity;
+- (NSString * _Nonnull)toQueryString;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
+@end
+
 @class UIResponder;
-@class Product;
-@class AppInfo;
+
+SWIFT_CLASS("_TtC5AceTM12AceParameter")
+@interface AceParameter : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable tk;)
++ (NSString * _Nullable)tk;
++ (void)setTk:(NSString * _Nullable)value;
++ (void)viewDidLoadWithResponder:(UIResponder * _Nonnull)responder;
++ (void)appDidFinishLaunchingWithResponder:(UIResponder * _Nonnull)responder;
+- (NSString * _Nonnull)toQueryString;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC5AceTM10AceProduct")
+@interface AceProduct : NSObject
+- (nonnull instancetype)initWithName:(NSString * _Nonnull)name code:(NSString * _Nonnull)code price:(double)price quantity:(NSInteger)quantity OBJC_DESIGNATED_INITIALIZER;
+- (void)setCodeWithCode:(NSString * _Nonnull)code;
+- (NSString * _Nonnull)getCode;
+- (void)setNameWithName:(NSString * _Nonnull)name;
+- (NSString * _Nonnull)getName;
+- (void)setPriceWithPrice:(double)price;
+- (double)getPrice;
+- (void)setQuantityWithQuantity:(NSInteger)quantity;
+- (NSInteger)getQuantity;
+- (void)addOptionWithOption:(AceOption * _Nonnull)option;
+- (NSArray<NSString *> * _Nonnull)toQueryString;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
+@end
+
 @class UIWebView;
 
 SWIFT_CLASS("_TtC5AceTM5AceTM")
 @interface AceTM : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull GD_MAN;)
++ (NSString * _Nonnull)GD_MAN;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull GD_WOMAN;)
++ (NSString * _Nonnull)GD_WOMAN;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull GD_UNKNOWN;)
++ (NSString * _Nonnull)GD_UNKNOWN;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 + (void)appDidFinishLaunchingWithResponder:(UIResponder * _Nonnull)responder;
 + (void)appOpenUrlWithResponder:(UIResponder * _Nonnull)responder url:(NSURL * _Nonnull)url;
@@ -143,12 +190,12 @@ SWIFT_CLASS("_TtC5AceTM5AceTM")
 + (void)bannerClickWithPromotionCode:(NSInteger)promotionCode bannerCode:(NSInteger)bannerCode;
 + (void)bannerViewWithPromotionCode:(NSInteger)promotionCode bannerCode:(NSInteger)bannerCode;
 + (void)codeErrWithErrCode:(NSInteger)errCode reason:(NSString * _Nullable)reason;
-+ (void)buyNowWithProduct:(Product * _Nonnull)product;
-+ (void)wishListWithProduct:(Product * _Nonnull)product;
-+ (void)addCartWithProduct:(Product * _Nonnull)product;
-+ (void)buyListWithPaymentMethod:(NSString * _Nonnull)paymentMethod orderNumber:(NSString * _Nonnull)orderNumber totalPrice:(double)totalPrice product:(Product * _Nonnull)product;
++ (void)buyNowWithProduct:(AceProduct * _Nonnull)product;
++ (void)wishListWithProduct:(AceProduct * _Nonnull)product;
++ (void)addCartWithProduct:(AceProduct * _Nonnull)product;
++ (void)buyListWithPaymentMethod:(NSString * _Nonnull)paymentMethod orderNumber:(NSString * _Nonnull)orderNumber totalPrice:(double)totalPrice product:(AceProduct * _Nonnull)product;
 + (void)reviewWithProductNumber:(NSString * _Nonnull)productNumber reviewContents:(NSString * _Nullable)reviewContents score:(NSInteger)score;
-+ (void)payWithPayName:(NSString * _Nonnull)payName product:(Product * _Nonnull)product;
++ (void)payWithPayName:(NSString * _Nonnull)payName product:(AceProduct * _Nonnull)product;
 + (void)loginWithResponder:(UIResponder * _Nonnull)responder userId:(NSString * _Nonnull)userId userAge:(NSInteger)userAge userGender:(NSString * _Nonnull)userGender group1:(NSString * _Nullable)group1 group2:(NSString * _Nullable)group2 group3:(NSString * _Nullable)group3 group4:(NSString * _Nullable)group4 group5:(NSString * _Nullable)group5;
 + (void)loginWithResponder:(UIResponder * _Nonnull)responder userId:(NSString * _Nonnull)userId userAge:(NSInteger)userAge userGender:(NSString * _Nonnull)userGender;
 + (void)joinWithResponder:(UIResponder * _Nonnull)responder userId:(NSString * _Nonnull)userId userValue:(NSInteger)userValue;
@@ -158,67 +205,8 @@ SWIFT_CLASS("_TtC5AceTM5AceTM")
 + (void)innerSearchWithPage:(NSString * _Nonnull)page keyword:(NSString * _Nonnull)keyword;
 + (void)sdkErrWithFunctionName:(NSString * _Nonnull)functionName reason:(NSString * _Nonnull)reason;
 + (void)sdkErrWithMsg:(NSString * _Nonnull)msg;
-+ (void)appListWithAppInfoList:(NSArray<AppInfo *> * _Nonnull)appInfoList;
 + (void)webViewDidFinishLoadWithWebView:(UIWebView * _Nonnull)webView;
 + (void)webViewDidStartLoadWithWebView:(UIWebView * _Nonnull)webView;
-@end
-
-
-SWIFT_CLASS("_TtC5AceTM7AppInfo")
-@interface AppInfo : NSObject
-+ (NSArray<AppInfo *> * _Nonnull)getAppList;
-+ (void)updateRunningApps;
-+ (NSArray<NSString *> * _Nonnull)toQueryStringWithAppInfoList:(NSArray<AppInfo *> * _Nonnull)appInfoList;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-@end
-
-
-SWIFT_CLASS("_TtC5AceTM6Option")
-@interface Option : NSObject
-- (nonnull instancetype)initWithCode:(NSString * _Nonnull)code name:(NSString * _Nonnull)name quantity:(NSInteger)quantity OBJC_DESIGNATED_INITIALIZER;
-- (void)setCodeWithCode:(NSString * _Nonnull)code;
-- (NSString * _Nonnull)getCode;
-- (void)setNameWithName:(NSString * _Nonnull)name;
-- (NSString * _Nonnull)getName;
-- (void)setQuantityWithQuantity:(NSInteger)quantity;
-- (NSInteger)getQuantity;
-- (NSString * _Nonnull)toQueryString;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-@end
-
-
-SWIFT_CLASS("_TtC5AceTM9Parameter")
-@interface Parameter : NSObject
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull GD_MAN;)
-+ (NSString * _Nonnull)GD_MAN;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull GD_WOMAN;)
-+ (NSString * _Nonnull)GD_WOMAN;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull GD_UNKNOWN;)
-+ (NSString * _Nonnull)GD_UNKNOWN;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable tk;)
-+ (NSString * _Nullable)tk;
-+ (void)setTk:(NSString * _Nullable)value;
-+ (void)viewDidLoadWithResponder:(UIResponder * _Nonnull)responder;
-+ (void)appDidFinishLaunchingWithResponder:(UIResponder * _Nonnull)responder;
-- (NSString * _Nonnull)toQueryString;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-@end
-
-
-SWIFT_CLASS("_TtC5AceTM7Product")
-@interface Product : NSObject
-- (nonnull instancetype)initWithName:(NSString * _Nonnull)name code:(NSString * _Nonnull)code price:(double)price quantity:(NSInteger)quantity OBJC_DESIGNATED_INITIALIZER;
-- (void)setCodeWithCode:(NSString * _Nonnull)code;
-- (NSString * _Nonnull)getCode;
-- (void)setNameWithName:(NSString * _Nonnull)name;
-- (NSString * _Nonnull)getName;
-- (void)setPriceWithPrice:(double)price;
-- (double)getPrice;
-- (void)setQuantityWithQuantity:(NSInteger)quantity;
-- (NSInteger)getQuantity;
-- (void)addOptionWithOption:(Option * _Nonnull)option;
-- (NSArray<NSString *> * _Nonnull)toQueryString;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
 @end
 
 #pragma clang diagnostic pop
