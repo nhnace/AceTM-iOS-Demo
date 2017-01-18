@@ -37,11 +37,11 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onClickPu(_ sender: UIButton) {
-        AceTM.login(responder: self, userId: "user_id1", userAge: 25, userGender: AceTM.GD_MAN, group1: "커스텀1", group2: "커스텀1", group3: "커스텀1", group4: "커스텀1", group5: "커스텀1")
+        AceTM.login(responder: self, userId: "user_id1", userAge: 25, userGender: AceTM.GD_MAN, group1: 1, group2: 2, group3: 0, group4: 0, group5: 0)
     }
 
     @IBAction func onClickErr(_ sender: UIButton) {
-        AceTM.pageErr()
+        AceTM.pageErr(page:"errorPage")
     }
 
     @IBAction func onClickHref(_ sender: UIButton) {
@@ -140,7 +140,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onClickLogin(_ sender: UIButton) {
-        AceTM.login(responder: self, userId: "userId2", userAge: 25, userGender: AceTM.GD_MAN, group1: "커스텀1", group2: "커스텀1", group3: "커스텀1", group4: "커스텀1", group5: "커스텀1")
+        AceTM.login(responder: self, userId: "userId2", userAge: 25, userGender: AceTM.GD_MAN, group1:2)
     }
 
     @IBAction func onClickJoin(_ sender: UIButton) {

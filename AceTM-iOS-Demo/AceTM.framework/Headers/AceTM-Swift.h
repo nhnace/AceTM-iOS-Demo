@@ -182,7 +182,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _No
 - (void)addSendQueueWithQueryString:(NSString * _Nonnull)queryString;
 + (void)pvWithResponder:(UIResponder * _Nonnull)responder;
 + (void)pvWithPage:(NSString * _Nonnull)page;
-+ (void)pageErr;
++ (void)pageErrWithResponder:(UIResponder * _Nonnull)responder;
++ (void)pageErrWithPage:(NSString * _Nonnull)page;
 + (void)hrefWithHref:(NSString * _Nonnull)href;
 + (void)telWithPhoneNumber:(NSString * _Nonnull)phoneNumber;
 + (void)customerClickWithClickName:(NSString * _Nonnull)clickName;
@@ -196,17 +197,22 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _No
 + (void)buyListWithPaymentMethod:(NSString * _Nonnull)paymentMethod orderNumber:(NSString * _Nonnull)orderNumber totalPrice:(double)totalPrice product:(AceProduct * _Nonnull)product;
 + (void)reviewWithProductNumber:(NSString * _Nonnull)productNumber reviewContents:(NSString * _Nullable)reviewContents score:(NSInteger)score;
 + (void)payWithPayName:(NSString * _Nonnull)payName product:(AceProduct * _Nonnull)product;
-+ (void)loginWithResponder:(UIResponder * _Nonnull)responder userId:(NSString * _Nonnull)userId userAge:(NSInteger)userAge userGender:(NSString * _Nonnull)userGender group1:(NSString * _Nullable)group1 group2:(NSString * _Nullable)group2 group3:(NSString * _Nullable)group3 group4:(NSString * _Nullable)group4 group5:(NSString * _Nullable)group5;
 + (void)loginWithResponder:(UIResponder * _Nonnull)responder userId:(NSString * _Nonnull)userId userAge:(NSInteger)userAge userGender:(NSString * _Nonnull)userGender;
++ (void)loginWithPage:(NSString * _Nonnull)page userId:(NSString * _Nonnull)userId userAge:(NSInteger)userAge userGender:(NSString * _Nonnull)userGender;
 + (void)joinWithResponder:(UIResponder * _Nonnull)responder userId:(NSString * _Nonnull)userId userValue:(NSInteger)userValue;
 + (void)deactivateWithResponder:(UIResponder * _Nonnull)responder userId:(NSString * _Nonnull)userId;
 + (void)detailViewWithResponder:(UIResponder * _Nonnull)responder productNumber:(NSString * _Nonnull)productNumber productName:(NSString * _Nonnull)productName productPrice:(double)productPrice productCategory:(NSString * _Nonnull)productCategory productImageUrl:(NSString * _Nonnull)productImageUrl;
++ (void)detailViewWithPage:(NSString * _Nonnull)page productNumber:(NSString * _Nonnull)productNumber productName:(NSString * _Nonnull)productName productPrice:(double)productPrice productCategory:(NSString * _Nonnull)productCategory productImageUrl:(NSString * _Nonnull)productImageUrl;
 + (void)innerSearchWithResponder:(UIResponder * _Nonnull)responder keyword:(NSString * _Nonnull)keyword;
 + (void)innerSearchWithPage:(NSString * _Nonnull)page keyword:(NSString * _Nonnull)keyword;
 + (void)sdkErrWithFunctionName:(NSString * _Nonnull)functionName reason:(NSString * _Nonnull)reason;
 + (void)sdkErrWithMsg:(NSString * _Nonnull)msg;
 + (void)webViewDidFinishLoadWithWebView:(UIWebView * _Nonnull)webView;
 + (void)webViewDidStartLoadWithWebView:(UIWebView * _Nonnull)webView;
+@end
+
+
+@interface NSUserDefaults (SWIFT_EXTENSION(AceTM))
 @end
 
 #pragma clang diagnostic pop

@@ -11,18 +11,20 @@
 		C1DAC8621E16298A00DCBB12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DAC8611E16298A00DCBB12 /* ViewController.swift */; };
 		C1DAC8651E16298A00DCBB12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1DAC8631E16298A00DCBB12 /* Main.storyboard */; };
 		C1DAC8671E16298A00DCBB12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1DAC8661E16298A00DCBB12 /* Assets.xcassets */; };
-		C1F6882E1E1B5B9A004D03DF /* AceTM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F6882D1E1B5B9A004D03DF /* AceTM.framework */; };
-		C1F688301E1B5BA0004D03DF /* AceTM.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C1F6882D1E1B5B9A004D03DF /* AceTM.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F785A3181E24BEDC00A8A1B2 /* HybridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A3171E24BEDC00A8A1B2 /* HybridViewController.swift */; };
+		F7B2017D1E2F6879002B0A4C /* AceTM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7B2017C1E2F6879002B0A4C /* AceTM.framework */; };
+		F7B2017F1E2F6880002B0A4C /* AceTM.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F7B2017C1E2F6879002B0A4C /* AceTM.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F7DCF6E81E271F86003D288B /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F7DCF6E71E271F86003D288B /* Test.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		C1C1F41E1E162FC4003632EB /* Embed Frameworks */ = {
+		F785A3161E24BA5900A8A1B2 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C1F688301E1B5BA0004D03DF /* AceTM.framework in Embed Frameworks */,
+				F7B2017F1E2F6880002B0A4C /* AceTM.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -36,7 +38,10 @@
 		C1DAC8641E16298A00DCBB12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C1DAC8661E16298A00DCBB12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C1DAC86B1E16298A00DCBB12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C1F6882D1E1B5B9A004D03DF /* AceTM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AceTM.framework; sourceTree = "<group>"; };
+		F785A3171E24BEDC00A8A1B2 /* HybridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HybridViewController.swift; sourceTree = "<group>"; };
+		F7B2017C1E2F6879002B0A4C /* AceTM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AceTM.framework; sourceTree = "<group>"; };
+		F7DCF6E61E271F86003D288B /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
+		F7DCF6E71E271F86003D288B /* Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1F6882E1E1B5B9A004D03DF /* AceTM.framework in Frameworks */,
+				F7B2017D1E2F6879002B0A4C /* AceTM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +75,15 @@
 		C1DAC85E1E16298A00DCBB12 /* AceTM-iOS-Demo */ = {
 			isa = PBXGroup;
 			children = (
-				C1F6882D1E1B5B9A004D03DF /* AceTM.framework */,
+				F7B2017C1E2F6879002B0A4C /* AceTM.framework */,
+				F785A3171E24BEDC00A8A1B2 /* HybridViewController.swift */,
 				C1DAC85F1E16298A00DCBB12 /* AppDelegate.swift */,
 				C1DAC8611E16298A00DCBB12 /* ViewController.swift */,
 				C1DAC8631E16298A00DCBB12 /* Main.storyboard */,
 				C1DAC8661E16298A00DCBB12 /* Assets.xcassets */,
 				C1DAC86B1E16298A00DCBB12 /* Info.plist */,
+				F7DCF6E61E271F86003D288B /* Test.h */,
+				F7DCF6E71E271F86003D288B /* Test.m */,
 			);
 			path = "AceTM-iOS-Demo";
 			sourceTree = "<group>";
@@ -90,7 +98,7 @@
 				C1DAC8581E16298A00DCBB12 /* Sources */,
 				C1DAC8591E16298A00DCBB12 /* Frameworks */,
 				C1DAC85A1E16298A00DCBB12 /* Resources */,
-				C1C1F41E1E162FC4003632EB /* Embed Frameworks */,
+				F785A3161E24BA5900A8A1B2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -113,7 +121,8 @@
 				TargetAttributes = {
 					C1DAC85B1E16298A00DCBB12 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = C79Y6FEE5T;
+						DevelopmentTeam = HA4JNBHU77;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -153,6 +162,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F785A3181E24BEDC00A8A1B2 /* HybridViewController.swift in Sources */,
+				F7DCF6E81E271F86003D288B /* Test.m in Sources */,
 				C1DAC8621E16298A00DCBB12 /* ViewController.swift in Sources */,
 				C1DAC8601E16298A00DCBB12 /* AppDelegate.swift in Sources */,
 			);
@@ -269,7 +280,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = C79Y6FEE5T;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = HA4JNBHU77;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AceTM-iOS-Demo",
@@ -278,6 +290,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.acecounter.ios.acetmtest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -286,7 +299,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = C79Y6FEE5T;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = HA4JNBHU77;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AceTM-iOS-Demo",

@@ -6,11 +6,15 @@
 	<dict>
 		<key>Headers/AceTM-Swift.h</key>
 		<data>
-		XZOfGgL1oFtx6mT/+itv8Id83sA=
+		D6p2+flZhmaiE83FsL74Tvhoxuo=
 		</data>
 		<key>Headers/AceTM-umbrella.h</key>
 		<data>
-		QdyJVedxBJjWXQzbtVCJWjg7MeI=
+		CzeAD2HuMxU8UR/h/VYVqFI1g9A=
+		</data>
+		<key>Headers/NSString+Encrypt.h</key>
+		<data>
+		gfXRMVO8WqgsDXbiF1T1nL9V4Ug=
 		</data>
 		<key>Headers/PrivateApi.h</key>
 		<data>
@@ -18,7 +22,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		fRQ5mt8h3DK/rJlfkxXmFE0ybFc=
+		CWk9ELtGGXDtXQle497NPp7BiTI=
 		</data>
 		<key>Modules/AceTM.swiftmodule/arm.swiftdoc</key>
 		<data>
@@ -26,7 +30,7 @@
 		</data>
 		<key>Modules/AceTM.swiftmodule/arm.swiftmodule</key>
 		<data>
-		0FrIBCplWr9F0b7utgztv8VCVcI=
+		kwroqdduVgIFhTuh0U7OxpqjfFQ=
 		</data>
 		<key>Modules/AceTM.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -34,7 +38,7 @@
 		</data>
 		<key>Modules/AceTM.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		iSDK+m6qUh95VDe3wXYByWUmLtY=
+		N9SFg91F7hbbICrMIhpq4EZd7is=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -47,22 +51,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			XZOfGgL1oFtx6mT/+itv8Id83sA=
+			D6p2+flZhmaiE83FsL74Tvhoxuo=
 			</data>
 			<key>hash2</key>
 			<data>
-			uzotL3sxQ1m6tOjCRqve867+FDSwaNmj6nM8YIpA4Gc=
+			VH65/PWbMY91C0lAcV5l9JFl2raaTkKWv+np3vj/xHQ=
 			</data>
 		</dict>
 		<key>Headers/AceTM-umbrella.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			QdyJVedxBJjWXQzbtVCJWjg7MeI=
+			CzeAD2HuMxU8UR/h/VYVqFI1g9A=
 			</data>
 			<key>hash2</key>
 			<data>
-			10UuZwzHkfRf9AX1pubBMIsHH5w8pS0m+8AeaUqjJmw=
+			JQr1Pr54YqHiJ/6CA+yqUUaIRft34DTM2+sCiCo1r6A=
+			</data>
+		</dict>
+		<key>Headers/NSString+Encrypt.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			gfXRMVO8WqgsDXbiF1T1nL9V4Ug=
+			</data>
+			<key>hash2</key>
+			<data>
+			sf8a48t1kGHMvHFdgxfwiVe6RCJhgL1INIi+d6CFSP4=
 			</data>
 		</dict>
 		<key>Headers/PrivateApi.h</key>
@@ -91,11 +106,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			0FrIBCplWr9F0b7utgztv8VCVcI=
+			kwroqdduVgIFhTuh0U7OxpqjfFQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			0riPhEryPWU9ct+dCnY40dSLbty0uBibCm3Smm8p42s=
+			41weF0xOrIwJNYXm6//CHWGRcOsodMRK9sh0Vmqo2fA=
 			</data>
 		</dict>
 		<key>Modules/AceTM.swiftmodule/arm64.swiftdoc</key>
@@ -113,11 +128,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			iSDK+m6qUh95VDe3wXYByWUmLtY=
+			N9SFg91F7hbbICrMIhpq4EZd7is=
 			</data>
 			<key>hash2</key>
 			<data>
-			bLpCD3D1OjAhLxgINvOfBJlxRMgqZgMzt3+5vhySe58=
+			Q0JZduh/BJxwYlUXUC5vIKOx6ugghTTnq3GHW0MMsjU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
