@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>ACECOUNTER_SID</key>
-	<string>100078</string>
+	<string>100004</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -33,7 +33,7 @@
 			<string>com.acecounter.ios.acetmtest</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>ACE100078</string>
+				<string>ACE100004</string>
 			</array>
 		</dict>
 	</array>

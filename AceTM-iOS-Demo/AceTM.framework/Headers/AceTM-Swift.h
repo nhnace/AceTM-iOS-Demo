@@ -162,6 +162,7 @@ SWIFT_CLASS("_TtC5AceTM10AceProduct")
 - (NSInteger)getQuantity;
 - (void)addOptionWithOption:(AceOption * _Nonnull)option;
 - (NSArray<NSString *> * _Nonnull)toQueryString;
++ (NSArray<NSString *> * _Nonnull)toProductListQueryStringWithProducts:(NSArray<AceProduct *> * _Nonnull)products;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 @end
 
@@ -195,8 +196,10 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _No
 + (void)wishListWithProduct:(AceProduct * _Nonnull)product;
 + (void)addCartWithProduct:(AceProduct * _Nonnull)product;
 + (void)buyListWithPaymentMethod:(NSString * _Nonnull)paymentMethod orderNumber:(NSString * _Nonnull)orderNumber totalPrice:(double)totalPrice product:(AceProduct * _Nonnull)product;
++ (void)buyListWithPaymentMethod:(NSString * _Nonnull)paymentMethod orderNumber:(NSString * _Nonnull)orderNumber totalPrice:(double)totalPrice products:(NSArray<AceProduct *> * _Nonnull)products;
 + (void)reviewWithProductNumber:(NSString * _Nonnull)productNumber reviewContents:(NSString * _Nullable)reviewContents score:(NSInteger)score;
 + (void)payWithPayName:(NSString * _Nonnull)payName product:(AceProduct * _Nonnull)product;
++ (void)payWithPayName:(NSString * _Nonnull)payName products:(NSArray<AceProduct *> * _Nonnull)products;
 + (void)loginWithResponder:(UIResponder * _Nonnull)responder userId:(NSString * _Nonnull)userId userAge:(NSInteger)userAge userGender:(NSString * _Nonnull)userGender;
 + (void)loginWithPage:(NSString * _Nonnull)page userId:(NSString * _Nonnull)userId userAge:(NSInteger)userAge userGender:(NSString * _Nonnull)userGender;
 + (void)joinWithResponder:(UIResponder * _Nonnull)responder userId:(NSString * _Nonnull)userId userValue:(NSInteger)userValue;

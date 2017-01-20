@@ -12,8 +12,8 @@
 		C1DAC8651E16298A00DCBB12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1DAC8631E16298A00DCBB12 /* Main.storyboard */; };
 		C1DAC8671E16298A00DCBB12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1DAC8661E16298A00DCBB12 /* Assets.xcassets */; };
 		F785A3181E24BEDC00A8A1B2 /* HybridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A3171E24BEDC00A8A1B2 /* HybridViewController.swift */; };
-		F7B2017D1E2F6879002B0A4C /* AceTM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7B2017C1E2F6879002B0A4C /* AceTM.framework */; };
-		F7B2017F1E2F6880002B0A4C /* AceTM.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F7B2017C1E2F6879002B0A4C /* AceTM.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F78FDD501E31FDDC006EE419 /* AceTM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F78FDD4F1E31FDDC006EE419 /* AceTM.framework */; };
+		F78FDD511E31FDE0006EE419 /* AceTM.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F78FDD4F1E31FDDC006EE419 /* AceTM.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F7DCF6E81E271F86003D288B /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F7DCF6E71E271F86003D288B /* Test.m */; };
 /* End PBXBuildFile section */
 
@@ -24,7 +24,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F7B2017F1E2F6880002B0A4C /* AceTM.framework in Embed Frameworks */,
+				F78FDD511E31FDE0006EE419 /* AceTM.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -39,7 +39,7 @@
 		C1DAC8661E16298A00DCBB12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C1DAC86B1E16298A00DCBB12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F785A3171E24BEDC00A8A1B2 /* HybridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HybridViewController.swift; sourceTree = "<group>"; };
-		F7B2017C1E2F6879002B0A4C /* AceTM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AceTM.framework; sourceTree = "<group>"; };
+		F78FDD4F1E31FDDC006EE419 /* AceTM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AceTM.framework; sourceTree = "<group>"; };
 		F7DCF6E61E271F86003D288B /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
 		F7DCF6E71E271F86003D288B /* Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -49,7 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7B2017D1E2F6879002B0A4C /* AceTM.framework in Frameworks */,
+				F78FDD501E31FDDC006EE419 /* AceTM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,7 +75,7 @@
 		C1DAC85E1E16298A00DCBB12 /* AceTM-iOS-Demo */ = {
 			isa = PBXGroup;
 			children = (
-				F7B2017C1E2F6879002B0A4C /* AceTM.framework */,
+				F78FDD4F1E31FDDC006EE419 /* AceTM.framework */,
 				F785A3171E24BEDC00A8A1B2 /* HybridViewController.swift */,
 				C1DAC85F1E16298A00DCBB12 /* AppDelegate.swift */,
 				C1DAC8611E16298A00DCBB12 /* ViewController.swift */,
@@ -96,9 +96,9 @@
 			buildConfigurationList = C1DAC86E1E16298A00DCBB12 /* Build configuration list for PBXNativeTarget "AceTM-iOS-Demo" */;
 			buildPhases = (
 				C1DAC8581E16298A00DCBB12 /* Sources */,
-				C1DAC8591E16298A00DCBB12 /* Frameworks */,
 				C1DAC85A1E16298A00DCBB12 /* Resources */,
 				F785A3161E24BA5900A8A1B2 /* Embed Frameworks */,
+				C1DAC8591E16298A00DCBB12 /* Frameworks */,
 			);
 			buildRules = (
 			);

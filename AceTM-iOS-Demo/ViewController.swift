@@ -99,25 +99,30 @@ class ViewController: UIViewController {
         let product1: AceProduct = AceProduct(name: "피죤 230ml", code: "100001", price: 3000, quantity: 2)
         product1.addOption(option: AceOption(code: "20000", name: "하얀색", quantity: 2))
         product1.addOption(option: AceOption(code: "20001", name: "검은색", quantity: 4))
-
         AceTM.buyList(paymentMethod: "무통장",orderNumber: "1003020", totalPrice: 50000.0, product: product1)
     }
 
 
     @IBAction func onClickBuyDirect(_ sender: UIButton) {
         let product1: AceProduct = AceProduct(name: "피죤 230ml", code: "100001", price: 3000, quantity: 2)
-        product1.addOption(option: AceOption(code: "20000", name: "하얀색", quantity: 2))
-        product1.addOption(option: AceOption(code: "20001", name: "검은색", quantity: 4))
 
         AceTM.buyList(paymentMethod: "무통장",orderNumber: "1003020", totalPrice: 50000.0, product: product1)
     }
 
     @IBAction func onClickBuyCredit(_ sender: UIButton) {
+        var products:[AceProduct] = []
+        
         let product1: AceProduct = AceProduct(name: "피죤 230ml", code: "100001", price: 3000, quantity: 2)
         product1.addOption(option: AceOption(code: "20000", name: "하얀색", quantity: 2))
         product1.addOption(option: AceOption(code: "20001", name: "검은색", quantity: 4))
 
-        AceTM.buyList(paymentMethod: "신용카드",orderNumber: "1003020", totalPrice: 50000.0, product: product1)
+        products.append(product1)
+        let product2: AceProduct = AceProduct(name: "샤프란 230ml", code: "100002", price: 3000, quantity: 2)
+        product1.addOption(option: AceOption(code: "20002", name: "XL", quantity: 2))
+        product1.addOption(option: AceOption(code: "20003", name: "L", quantity: 4))
+        products.append(product2)
+        
+        AceTM.buyList(paymentMethod: "신용카드",orderNumber: "1003020", totalPrice: 50000.0, products:[product1,product2])
     }
 
     @IBAction func onClickBuyEtc(_ sender: UIButton) {
