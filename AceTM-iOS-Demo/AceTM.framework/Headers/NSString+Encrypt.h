@@ -7,7 +7,6 @@
 
 #import <Foundation/Foundation.h>
 
-
 @interface NSString (NSString_Encrypt)
 
 - (NSString *)encryptWithKey:(NSString*)key;

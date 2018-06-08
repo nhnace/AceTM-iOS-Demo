@@ -2,7 +2,7 @@
 #import <UIKit/UIKit.h>
 #endif
 
-#import "PrivateApi.h"
+#import "AceUtil.h"
 #import "NSString+Encrypt.h"
 
 FOUNDATION_EXPORT double AceTMVersionNumber;

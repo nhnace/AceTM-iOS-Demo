@@ -16,7 +16,7 @@ class HybridViewController: UIViewController, UIWebViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        AceTM.viewDidLoad(responder: self)
+        AceTM.viewDidLoad(responder: self, autoPv: false)
 
 
         let request = URLRequest(url: URL(string: "http://www.amazingsoft.com/webview/index.html")!)
