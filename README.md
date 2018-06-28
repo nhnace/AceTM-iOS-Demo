@@ -1,38 +1,25 @@
-# AceTM-iOS-Demo
-AceTM SDK를 적용하기 위한 데모 어플리케이션입니다.
+# AceCounter+ iOS SDK
+AceCounter+ 분석 서비스를 사용하기 위한 iOS SDK 입니다.
+* [AceCounter+ 서비스 페이지 바로가기](https://new.acecounter.com/common/front)
+* [설치 가이드 바로가기](https://github.com/nhndnt/AceTM-iOS-Demo/wiki)
 
-## Project에 SDK 추가하는 방법  
-* Framework 추가하기 (Xcode>프로젝트파일> AceTM-x.y.z.framework Drag&Drop)
-![Screenshot](https://github.com/nhndnt/AceTM-iOS-Demo/blob/master/images/README1.png)
-* Framwoke 설정하기 (프로젝트>Embedded Binaries> AceTM-x.y.z.framework 추가)
-![Screenshot](https://github.com/nhndnt/AceTM-iOS-Demo/blob/master/images/README2.png)
-* 중복 Framwork 링크 제거(경우에 따라 Linked Frameworks and Libraries가 두개 추가 될 수 있음)
-* 프로젝트> 프로젝트>Embedded Binaries> AceTM-x.y.z.framework 추가 > AceTM-x.y.z.framework 2개중 하나 삭제
-![Screenshot](https://github.com/nhndnt/AceTM-iOS-Demo/blob/master/images/README3.png)
-## SDK 기본 설정 
-* 인터넷 퍼미션 추가 (info.plist)
-![Screenshot](https://github.com/nhndnt/AceTM-iOS-Demo/blob/master/images/README5.png)
-* AceCounter SID 설정 (info.plist)
-![Screenshot](https://github.com/nhndnt/AceTM-iOS-Demo/blob/master/images/README6.png)
-* AceTM SDK 초기화 하기 AppDelegate Class 설정(반드시 didFinishLaunching 메소드에 명시하기)
+# Sample 앱 이용시 주의사항
+* 프로젝트 > General > Bundle Identifier에 입력된 `YOUR-BUNDLE-IDENTIFIER`를 수정하셔야합니다.
+<p align="center">
+<img src="../../wiki/assets/bundle_id.png"/>
+</p>
 
-``` swift
-//in swift
-import AceTM
-func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        AceTM.appDidFinishLaunching(responder: self)
-        return true
-}
-```
-``` objective-c
-//in objective-c
-#import <AceTM/AceTM-Swift.h>
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [AceTM appDidFinishLaunchingWithResponder:self];
-    return YES;
-}
-```
-* CPA 측정용 Deep-link 설정
-![Screenshot](https://github.com/nhndnt/AceTM-iOS-Demo/blob/master/images/README7.png)
-- URL Schemes는 “ACE” + SID  구성 입력. (중요: 반드시 대문자로 입력할것)
-- identifier는 자신의 페키지 고유 id 입력
+* 프로젝트 > General > Info URL Types에 입력된 `YOUR-BUNDLE-IDENTIFIER`와 `ACE+YOUR_SID`를 수정하셔야합니다.
+<p align="center">
+<img src="../../wiki/assets/url_types.png"/>
+</p>
+
+* info.plist에 ACECOUNTER_SID key에 입력된 `YOUR_SID`를 수정하셔야합니다.
+<p align="center">
+<img src="../../wiki/assets/info.png"/>
+</p>
+
+# FAQ
+* [데이터 수집이 정상적으로 이루어지는지 확인하고 싶습니다.](../../wiki/FAQ#q--%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%88%98%EC%A7%91%EC%9D%B4-%EC%A0%95%EC%83%81%EC%A0%81%EC%9C%BC%EB%A1%9C-%EC%9D%B4%EB%A3%A8%EC%96%B4%EC%A7%80%EB%8A%94%EC%A7%80-%ED%99%95%EC%9D%B8%ED%95%98%EA%B3%A0-%EC%8B%B6%EC%8A%B5%EB%8B%88%EB%8B%A4)
+* [데이터 수집이 안되는 것 같습니다.](../../wiki/FAQ#q--%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%88%98%EC%A7%91%EC%9D%B4-%EC%95%88%EB%90%98%EB%8A%94-%EA%B2%83-%EA%B0%99%EC%8A%B5%EB%8B%88%EB%8B%A4)
+* [SDK를 설치하고 앱 배포 또는 validate 검사시 x86_64, i386 오류가 납니다.](../../wiki/FAQ#q--sdk%EB%A5%BC-%EC%84%A4%EC%B9%98%ED%95%98%EA%B3%A0-%EC%95%B1-%EB%B0%B0%ED%8F%AC-%EB%98%90%EB%8A%94-validate-%EA%B2%80%EC%82%AC%EC%8B%9C-x86_64-i386-%EC%98%A4%EB%A5%98%EA%B0%80-%EB%82%A9%EB%8B%88%EB%8B%A4)
